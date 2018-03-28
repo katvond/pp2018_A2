@@ -8,7 +8,7 @@ $(document).ready(function () {
     var dat = $.datepicker.formatDate('yy-mm-dd', new Date());
     console.log(dat)
 
-    if (getUrlVars()["date"] != null) {
+    if (getUrlVars()["date"] != null && getUrlVars()["date"] > dat) {
         console.log(getUrlVars()["date"])
         $('#datepicker-1').val(getUrlVars()["date"]);
         doSomething();
